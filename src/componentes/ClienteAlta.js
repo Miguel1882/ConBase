@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../clientes.css";
 
 function Clientes() {
   const [clientes, setClientes] = useState([]);
@@ -10,7 +11,7 @@ function Clientes() {
   }, []);
 
   const cargarClientes = () => {
-    fetch("https://localhost:7055/Clientes")
+    fetch(`${process.env.REACT_APP_API_URL}/Clientes`)
       .then((response) => response.json())
       .then((data) => {
         setClientes(data);
@@ -26,7 +27,7 @@ function Clientes() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("https://localhost:7055/Clientes", {
+    fetch(`${process.env.REACT_APP_API_URL}/Clientes`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(nuevoCliente),
