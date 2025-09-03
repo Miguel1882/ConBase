@@ -1,0 +1,78 @@
+/* Contenedor general */
+.clientes-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+}
+
+/* Título */
+.clientes-container h1,
+.clientes-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #222;
+  font-size: 1.5rem;
+}
+
+/* Formulario */
+.clientes-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.clientes-container form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.clientes-container form button {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.clientes-container form button:hover {
+  background: #125ea6;
+}
+
+/* Tabla */
+.clientes-container table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.clientes-container th,
+.clientes-container td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.clientes-container thead {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.clientes-container tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.clientes-container tbody tr:hover {
+  background: #eef6ff;
+  transition: background 0.2s;
+}

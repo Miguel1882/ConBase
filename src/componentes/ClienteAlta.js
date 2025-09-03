@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../clientes.css";
+import "./ClienteAlta.css";
 
 function Clientes() {
   const [clientes, setClientes] = useState([]);
@@ -46,8 +46,8 @@ function Clientes() {
   if (loading) return <p>Cargando clientes...</p>;
 
   return (
-    <div className="p-6">
-      <h1 className="text-xl font-bold mb-4">Lista de Clientes</h1>
+    <div className="clientes-container">
+      <h1 className="text-xl font-bold mb-4">Alta de clientes</h1>
 
       {/* Formulario */}
       <form onSubmit={handleSubmit} className="mb-6 flex gap-4">
