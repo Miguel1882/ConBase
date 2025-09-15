@@ -2,7 +2,7 @@
 .clientes-container {
   max-width: 900px;
   margin: 2rem auto;
-  padding: 1.5rem;
+  padding: 10.5rem;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -11,7 +11,7 @@
 
 /* Título */
 .clientes-container h2 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 1rem;
   color: #222;
 }

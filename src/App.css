@@ -1,1 +1,18 @@
 
+/* .App{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 100vh;
+    align-items: center;
+    justify-items: left;
+    padding: 40px;
+    box-sizing: border-box;
+    
+}
+
+.App, .cabecera{
+    background-color: rgb(105, 105, 110);
+    width: 15%;
+    height: 100vh;
+    align-items: center;
+} */

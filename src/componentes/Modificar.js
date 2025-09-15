@@ -10,7 +10,8 @@ function Modificar() {
   }, []);
 
   const cargarClientes = () => {
-    fetch(`${process.env.REACT_APP_API_URL}/Clientes`)
+    // fetch(`${process.env.REACT_APP_API_URL}/Clientes`)
+fetch("https://localhost:53009/Clientes/listar")
       .then((response) => response.json())
       .then((data) => setClientes(data))
       .catch((error) => console.error(error));
@@ -25,6 +26,7 @@ function Modificar() {
   const editarCliente = (cliente) => {
     setClienteEditando(cliente.id);
     setFormData({
+      id: cliente.id,
       nombre: cliente.nombre,
       email: cliente.email,
       telefono: cliente.telefono,
@@ -33,8 +35,10 @@ function Modificar() {
 
   // Guardar cambios
   const guardarCambios = (id) => {
-    fetch(`${process.env.REACT_APP_API_URL}/Clientes/${id}`, {
-      method: "PUT",
+    // fetch(`${process.env.REACT_APP_API_URL}/Clientes/${id}`, {
+
+    fetch(`https://localhost:53009/Clientes/modificar`, {
+      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id, ...formData }),
     })
@@ -45,6 +49,7 @@ function Modificar() {
       .then((data) => {
         setClientes(clientes.map((c) => (c.id === id ? data : c))); // actualizar en la lista
         setClienteEditando(null); // salir del modo edición
+        setFormData({ id:0, nombre: "", email: "", telefono: "" }); // limpiar
       })
       .catch((error) => console.error(error));
   };

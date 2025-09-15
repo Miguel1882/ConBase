@@ -11,7 +11,9 @@ function Clientes() {
   }, []);
 
   const cargarClientes = () => {
-    fetch(`${process.env.REACT_APP_API_URL}/Clientes`)
+    // fetch(`${process.env.REACT_APP_API_URL}/Clientes`)
+
+   fetch("https://localhost:53009/Clientes/listar")
       .then((response) => response.json())
       .then((data) => {
         setClientes(data);
@@ -27,7 +29,9 @@ function Clientes() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch(`${process.env.REACT_APP_API_URL}/Clientes`, {
+    // fetch(`${process.env.REACT_APP_API_URL}/alta`, {
+
+fetch("https://localhost:53009/Clientes/alta", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(nuevoCliente),

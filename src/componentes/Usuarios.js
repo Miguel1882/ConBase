@@ -1,24 +1,23 @@
 import { useEffect, useState } from "react";
-import "./Clientes.css";
+import "./ClienteV.css";
 
 
-function Clientes() {
-  const [clientes, setClientes] = useState([]);
+function Usuarios() {
+  const [usuarios, setUsuarios] = useState([]);
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
-    // fetch("https://localhost:53009/Clientes/listar")
 
-fetch(`${apiUrl}/Clientes/listar`)
+fetch(`${apiUrl}/Usuarios/listar`)
       .then((respuesta) => respuesta.json())
-      .then((json) => setClientes(json));
+      .then((json) => setUsuarios(json));
   }, []);
 
   return (
     <div className="clientes-container">
-      <h2>Lista de Clientes</h2>
-      {clientes.length > 0 ? (
+      <h2>Lista de Usuarios</h2>
+      {usuarios.length > 0 ? (
         <table className="clientes-tabla">
           <thead>
             <tr>
@@ -29,7 +28,7 @@ fetch(`${apiUrl}/Clientes/listar`)
             </tr>
           </thead>
           <tbody>
-            {clientes.map((wf) => (
+            {usuarios.map((wf) => (
               <tr key={wf.id}>
                 <td>{wf.id}</td>
                 <td>{wf.nombre}</td>
@@ -46,5 +45,4 @@ fetch(`${apiUrl}/Clientes/listar`)
   );
 }
 
-export default Clientes;
-
+export default Usuarios;

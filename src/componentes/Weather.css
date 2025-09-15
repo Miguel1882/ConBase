@@ -1,0 +1,61 @@
+/* Weather.css */
+.weather-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  /* background: linear-gradient(135deg, #bed7ed, #00f2fe); */
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  text-align: center;
+}
+
+.weather-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+margin: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    top: 0;
+    left: 20%;
+    position: absolute;
+
+}
+
+.weather-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    top: 10%;
+    left: 20%;
+    position: absolute;
+
+
+
+
+
+
+}
+
+.weather-container li {
+   /* background: rgba(255, 255, 255, 0.15); */
+   background-color: rgb(210, 209, 209);
+  margin: 10px 0;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+ transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.weather-container li:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.25);
+}

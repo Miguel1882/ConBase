@@ -1,0 +1,30 @@
+
+
+.cabecera{
+    background-color: rgb(202, 214, 224);
+    width: 10%;
+    height: 100vh;
+}
+
+
+.enlaces{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+}
+
+.btn{
+    margin: 10px;
+    width: 100px;
+    height: 35px;
+ font-size: 17px;
+ font-weight: bold;
+border-radius: 10px;
+
+}
+
+.btn:hover{
+    background-color: rgb(174, 217, 202);
+    cursor:pointer;
+}   

@@ -9,7 +9,9 @@ function Eliminar() {
   }, []);
 
   const cargarClientes = () => {
-    fetch(`${process.env.REACT_APP_API_URL}/Clientes`)
+    // fetch(`${process.env.REACT_APP_API_URL}/Clientes`)
+
+    fetch("https://localhost:53009/Clientes/listar")
       .then((response) => response.json())
       .then((data) => {
         setClientes(data);
@@ -23,8 +25,11 @@ function Eliminar() {
   const eliminarCliente = (id) => {
     if (!window.confirm("¿Seguro que deseas eliminar este cliente?")) return;
 
-    fetch(`${process.env.REACT_APP_API_URL}/Clientes/${id}`, {
-      method: "DELETE", // ✅ usa DELETE si tu API lo soporta
+    // fetch(`${process.env.REACT_APP_API_URL}/Clientes/${id}`, {
+
+     fetch(`https://localhost:53009/Clientes/${id}`, {     
+      method: "Post",
+       // ✅ usa DELETE si tu API lo soporta
     })
       .then((response) => {
         if (!response.ok) throw new Error("Error al eliminar cliente");
